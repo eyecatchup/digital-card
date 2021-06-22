@@ -6,7 +6,6 @@ window.addEventListener('load', (event) => {
     const cardFront = document.querySelector('.card-front')
     const cardBack = document.querySelector('.card-back')
 
-
     let cardFrontImage = new URLSearchParams(window.location.search).get("front")
     let cardBackImage = new URLSearchParams(window.location.search).get("back")
 
@@ -18,13 +17,11 @@ window.addEventListener('load', (event) => {
         cardBack.querySelector('img').src = decodeURIComponent(cardBackImage)
     }
 
-    // init click handler
-    
-
     btnOpen.addEventListener('click', (e) => {
         let flipBtnStyle, openBtnText, timeoutms
         if (envelope.classList.contains('open')) {
             envelope.classList.remove('open')
+            cardInner.classList.remove('flipped')
             flipBtnStyle = 'none'
             openBtnText = 'Karte öffnen'
             timeoutms = 500
@@ -39,6 +36,7 @@ window.addEventListener('load', (event) => {
             btnOpen.innerText = openBtnText
         }, timeoutms)
     })
+
     btnFlip.addEventListener('click', (e) => {
         cardInner.classList.toggle('flipped')
     })
