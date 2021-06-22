@@ -30,46 +30,13 @@ body {
   margin-top: 60px;
 }
 
-.buttons {
-  margin-top: 30px;
-}
-
-.buttons button {
-  font-weight: 800;
-  font-style: normal;
-  -webkit-transition: all 0.1s linear;
-  transition: all 0.1s linear;
-  -webkit-appearance: none;
-  background-color: transparent;
-  border: solid 2px #fff;
-  border-radius: 4px;
-  color: #fff;
-  display: inline-block;
-  font-size: 14px;
-  text-transform: uppercase;
-  margin: 5px;
-  padding: 10px;
-  line-height: 1em;
-  text-decoration: none;
-  min-width: 120px;
-  cursor: pointer;
-}
-
-.buttons button:hover {
-  background-color: #0077B2;
-}
-
-#flip {
-  display: none;
-}
-
 .envelope {
   position: relative;
   width: 640px;
   height: 320px;
   border-bottom-left-radius: var(--envelope-border-radius);
   border-bottom-right-radius: var(--envelope-border-radius);
-  box-shadow: 0 4px 20px rgb(0 0 0%);
+  box-shadow: 0 3px 30px rgba(0, 0, 0, .7);
 }
 
 .envelope .flap {
@@ -160,6 +127,39 @@ body {
 
 .envelope.open .card {
   animation: insert-card 1s linear 1.5s forwards;
+}
+
+.buttons {
+  margin-top: 30px;
+}
+
+.buttons button {
+  font-weight: 800;
+  font-style: normal;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: solid 2px #fff;
+  border-radius: 4px;
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin: 5px;
+  padding: 10px;
+  line-height: 1em;
+  text-decoration: none;
+  min-width: 120px;
+  cursor: pointer;
+}
+
+.buttons button:hover {
+  background-color: rgba(255, 255, 255, .3);
+}
+
+#flip {
+  display: none;
 }
 
 @keyframes flip-card_up {
